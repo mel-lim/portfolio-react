@@ -9,12 +9,11 @@ import { HeroImageThumbnail } from "./components/HeroImageThumbnail";
 
 import { Footer } from "./components/Footer";
 
-import { pernWebApp, javascriptGame, listmakerApp, responsiveWebsite, interactiveWebsite } from "./config";
+import { pernWebApp, javascriptGame, listmakerApp, interactiveWebsite } from "./config";
 
 import pernWebAppThumbnail from "./resources/images/kitcollab-thumbnail.png";
 import profilePhotoIdeas from "./resources/images/profile-photo-ideas.jpeg";
 import portfolioThumbnail from "./resources/images/og-portfolio-thumbnail.png";
-import responsiveWebpageThumbnail from "./resources/images/thumbnail-responsive-webpage.png";
 
 import interactiveWebsiteVideo from "./resources/videos/interactive-website-demo.mp4";
 import interactiveWebsiteAltImg from "./resources/images/interactive-website-thumbnail.png";
