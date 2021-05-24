@@ -1,13 +1,195 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Padauk&family=Zilla+Slab:wght@300&display=swap');
+
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Padauk', sans-serif;
+font-family: 'Zilla Slab', serif; */
+
+/* Font styles */
+h1 {
+  font-family: 'Zilla Slab', serif;
+  font-size: 3.75rem;
+  margin: 0.5rem 0 0 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  margin: 0;
+}
+
+h3 {
+  font-family: 'Dosis', sans-serif;
+}
+
+p {
+  font-family: 'Dosis', sans-serif;
+  font-weight: lighter;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin: 0;
+}
+
+button {
+  font-family: 'Zilla Slab', serif;
+  font-size: 1.3rem;
+  line-height: 1;
+  margin: 0;
+}
+
+header a {
+  font-family: 'Neucha', cursive;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.click-to-enlarge-button p, .thumbnail-label p {
+  font-size: 0.6rem;
+  line-height: 1;
+  margin: 0;
+  font-weight: bolder;
+}
+
+#contact-form input[type=text], #contact-form textarea {
+  font-family: 'Dosis', sans-serif;
+}
+
+#contact-form input[type=submit] {
+  font-family: 'Neucha', cursive;
+  line-height: 1;
+  margin: 0;
+}
+
+/* General styles */
+
+body {
+  background-color: hsl(210, 14%, 19%);  
+  position: relative;
+  min-height: 100vh;
+}
+
+header {
+  padding: 15px;
+}
+
+header a {
+  color: hsl(204, 24%, 92%);
+}
+
+.button-link {
+  text-decoration: none;
+}
+
+.button-link:visited {
+  text-decoration: none;
+}
+
+footer {
+  color: #B3BFBC;
+  padding: 0;
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+/* Name the grid items */
+header {
+  grid-area: header;
+}
+
+#intro-container {
+  grid-area: intro;
+}
+
+#profile-photo-container {
+  grid-area: photo;
+}
+
+#responsive-website-container {
+  grid-area: responsive;
+}
+
+#pern-web-app-container {
+  grid-area: pern;
+}
+
+#javascript-game-container {
+  grid-area: game;
+}
+
+#listmaker-app-container {
+  grid-area: listmaker;
+}
+
+#secondary-profile-photo-container {
+  grid-area: secondary;
+}
+
+#interactive-website-container {
+  grid-area: interactive;
+}
+
+#portfolio-container {
+  grid-area: portfolio;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* Main grid items layout and appearance */
+
+#portfolio-main {
+  margin: 40px auto 20px auto;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(8, 100px);
+  grid-template-rows: repeat(12, 100px);
+  grid-template-areas:
+      "intro      intro       intro         intro     intro     header     header     header"
+      "intro      intro       intro         intro     intro     photo     photo     photo"
+      "intro      intro       intro         intro     intro     photo     photo     photo"
+      "intro      intro       intro         intro     intro     photo     photo     photo"
+      "interactive interactive interactive  pern     pern      pern      pern      pern"
+      "interactive interactive interactive  pern     pern      pern      pern      pern"
+      "interactive interactive interactive  pern     pern      pern      pern      pern"
+      "game       game        game          pern     pern      pern      pern      pern"
+      "game       game        game          pern     pern      pern      pern      pern"
+      "game       game        game          listmaker listmaker listmaker secondary secondary"
+      ".          portfolio   portfolio     listmaker listmaker listmaker secondary secondary"
+      ".          portfolio   portfolio     listmaker listmaker listmaker footer         footer";
+  column-gap: 7px;
+  row-gap: 7px;
+  justify-content: center;
+}
+
+.embedded-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* Intro container */
+#intro-container {
+  background-color: hsl(32, 49%, 92%);
+  color: hsl(203, 3%, 20%);
+  box-sizing: border-box;
+  padding: 5% 7.5% 6.5% 7.5%;
+  border-radius: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+/* Header */
+header {
+  text-align: center;
+  color: hsl(32, 49%, 92%);
+}
+
+footer {
+  margin: 0;
+}
+
+footer p {
+  margin-top: 1rem;
 }
