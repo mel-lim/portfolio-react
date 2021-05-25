@@ -1,0 +1,53 @@
+.modal {
+    font-family: 'Zilla Slab', serif;
+    font-size: 12px;
+    background-color: whitesmoke;
+    padding: 1rem;
+    border: solid 1.5px hsl(203, 3%, 20%);
+}
+
+.modal>.header {
+    border-bottom: 1px solid gray;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+}
+
+.modal>.content {
+    width: 100%;
+    padding: 10px 5px;
+}
+
+.modal p {
+    margin: 1rem 0;
+}
+
+.modal li {
+    line-height: 1.5;
+}
+
+.modal>.actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+}
+
+.modal-button {
+    width: 140px;
+    margin: 0 10px; 
+}
+
+.modal>.close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+}

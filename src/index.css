@@ -1,14 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Padauk&family=Zilla+Slab:wght@300&display=swap');
-
-/* font-family: 'Open Sans', sans-serif;
-font-family: 'Padauk', sans-serif;
-font-family: 'Zilla Slab', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Dosis&family=Zilla+Slab:wght@300&display=swap');
 
 /* Font styles */
+
 h1 {
   font-family: 'Zilla Slab', serif;
-  font-size: 3.5rem;
-  margin: 1rem 0 0 0;
+  font-size: 3rem;
+  margin: 1.75rem 0 0 0;
 }
 
 h2 {
@@ -31,15 +28,9 @@ p {
 
 button {
   font-family: 'Zilla Slab', serif;
-  font-size: 1.3rem;
-  line-height: 1;
+  font-size: 1rem;
+  line-height: 1.5;
   margin: 0;
-}
-
-header a {
-  font-family: 'Neucha', cursive;
-  font-size: 1.3rem;
-  line-height: 1;
 }
 
 .click-to-enlarge-button p, .thumbnail-label p {
@@ -62,13 +53,9 @@ header a {
 /* General styles */
 
 body {
-  background-color: hsl(210, 14%, 19%);  
+  background-color: hsl(210, 14%, 19%);
   position: relative;
   min-height: 100vh;
-}
-
-header a {
-  color: hsl(204, 24%, 92%);
 }
 
 .embedded-media {
@@ -78,12 +65,11 @@ header a {
   border-radius: 2px;
 }
 
-.button-link {
-  text-decoration: none;
-}
-
-.button-link:visited {
-  text-decoration: none;
+.pillbox-button {
+  cursor: pointer;
+  border: solid 1.5px hsl(203, 3%, 20%);
+  border-radius: 20px;
+  padding: 5px 10px;
 }
 
 footer {
@@ -94,6 +80,7 @@ footer {
 }
 
 /* Name the grid areas */
+
 header {
   grid-area: header;
 }
@@ -139,31 +126,21 @@ footer {
 }
 
 /* Main grid items layout and appearance */
+
 #portfolio-main {
   margin: 40px auto 20px auto;
   display: grid;
-  width: 100%;
-  grid-template-columns: repeat(8, 100px);
-  grid-template-rows: repeat(12, 100px);
-  grid-template-areas:
-      "intro      intro       intro         intro     intro     header     header     header"
-      "intro      intro       intro         intro     intro     photo     photo     photo"
-      "intro      intro       intro         intro     intro     photo     photo     photo"
-      "intro      intro       intro         intro     intro     photo     photo     photo"
-      "interactive interactive interactive  pern     pern      pern      pern      pern"
-      "interactive interactive interactive  pern     pern      pern      pern      pern"
-      "interactive interactive interactive  pern     pern      pern      pern      pern"
-      "game       game        game          pern     pern      pern      pern      pern"
-      "game       game        game          pern     pern      pern      pern      pern"
-      "game       game        game          listmaker listmaker listmaker secondary secondary"
-      ".          portfolio   portfolio     listmaker listmaker listmaker secondary secondary"
-      ".          portfolio   portfolio     listmaker listmaker listmaker footer         footer";
+  width: 85%;
+  grid-template-columns: repeat(8, 10.5vw);
+  grid-template-rows: repeat(12, 10.5vw);
+  grid-template-areas: "intro      intro       intro         intro     intro     header    header    header" "intro      intro       intro         intro     intro     photo     photo     photo" "intro      intro       intro         intro     intro     photo     photo     photo" "intro      intro       intro         intro     intro     photo     photo     photo" "interactive interactive interactive  pern      pern      pern      pern      pern" "interactive interactive interactive  pern      pern      pern      pern      pern" "interactive interactive interactive  pern      pern      pern      pern      pern" "game       game        game          pern      pern      pern      pern      pern" "game       game        game          pern      pern      pern      pern      pern" "game       game        game          listmaker listmaker listmaker secondary secondary" ".          portfolio   portfolio     listmaker listmaker listmaker secondary secondary" ".          portfolio   portfolio     listmaker listmaker listmaker footer    footer";
   column-gap: 7px;
   row-gap: 7px;
   justify-content: center;
 }
 
 /* Intro container */
+
 #intro-container {
   background-color: hsl(32, 49%, 92%);
   color: hsl(203, 3%, 20%);
@@ -175,7 +152,58 @@ footer {
   align-content: space-around;
 }
 
+#buttons-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.pillbox-button {
+  cursor: pointer;
+  border: solid 1.5px hsl(203, 3%, 20%);
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+#get-in-touch-button {
+  background-color: hsl(0, 0%, 94%);
+  color: hsl(203, 3%, 20%);
+  margin-right: 10px;
+}
+
+.lighten-on-hover-button:hover {
+  border: solid 1.5px hsl(203, 3%, 20%);
+  background-color: white;
+  color: hsl(240, 2%, 11%);
+  filter: brightness(140%);
+}
+
+.social-media-icon {
+  height: 2em;
+  width: 2em;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: none;
+  margin-right: 10px;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.social-media-icon:hover {
+  filter: brightness(140%);
+}
+
+#github-icon {
+  background-image: url("./resources/icons/social-1_logo-github.svg");
+}
+
+#linkedin-icon {
+  background-image: url("./resources/icons/social-1_logo-linkedin.svg");
+}
+
 /* Header */
+
 header {
   text-align: center;
   color: hsl(32, 49%, 92%);
@@ -187,4 +215,63 @@ footer {
 
 footer p {
   margin-top: 1rem;
+}
+
+/* Hero image */
+.hero-image-container {
+  position: relative;
+}
+
+.middle-circle {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 30%;
+}
+
+.circle-shape {
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1.5px hsl(203, 3%, 20%);
+  background-color: white;
+  color: hsl(203, 3%, 20%);
+  border-radius: 50%;
+  justify-content: center;
+  align-content: center;
+}
+
+.hero-image-container p {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+.learn-more-button {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(204, 24%, 92%);
+  font-size: 1rem;
+  color: hsl(203, 3%, 20%);
+
+}
+
+.learn-more-button:hover {
+  background-color: hsl(203, 3%, 20%);
+  color: #B3BFBC;
+  border: solid 1px hsl(203, 3%, 20%);
+}
+
+/* Breakpoint 750px */
+
+@media only screen and (min-width: 1050px) {
+  /* Main grid items layout and appearance */
+  #portfolio-main {
+    width: 900px;
+    grid-template-columns: repeat(8, 94.5px);
+    grid-template-rows: repeat(12, 94.5px);
+  }
 }
