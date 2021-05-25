@@ -11,10 +11,13 @@ import javascriptGameAltImg from "./resources/images/javascript-game-thumbnail.p
 import listmakerVideo from "./resources/videos/listmaker-demo.mp4";
 import listmakerAltImg from "./resources/images/interactive-listmaker-thumbnail.png";
 
+import portfolioThumbnail from "./resources/images/og-portfolio-thumbnail.png";
+
 export const pernWebApp = {
     keyword: "pern-web-app",
     thumbnail: pernWebAppThumbnail,
     altTag: "pern web app",
+    labelName: "Full-stack, persistent web application (PERN)",
     url: "https://kitcollab.netlify.app"
 }
 
@@ -41,7 +44,15 @@ export const javascriptGame = {
     altTag: "listmaker web app",
     video: listmakerVideo,
     altImg: listmakerAltImg,
-    labelName: 'Listmaker web app',
+    labelName: 'Vanilla javascript listmaker',
     url: 'https://mel-lim.github.io/adventure-website/plan-adventure.html',
+  }
+
+  export const portfolio = {
+    keyword: "portfolio",
+    image: portfolioThumbnail,
+    altTag: "portfolio",
+    labelName: "Portfolio",
+    url: null
   }
   

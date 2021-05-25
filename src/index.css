@@ -238,6 +238,7 @@ footer p {
   border-radius: 50%;
   justify-content: center;
   align-content: center;
+  padding: 0.4rem;
 }
 
 .hero-image-container p {
@@ -263,8 +264,8 @@ footer p {
   border: solid 1px hsl(203, 3%, 20%);
 }
 
-/* Video thumbnails */
-.video-thumbnail-container {
+/* Video and image thumbnails */
+.video-thumbnail-container, .image-thumbnail-container {
   position: relative;
 }
 
@@ -283,7 +284,7 @@ footer p {
   align-items: baseline;
 }
 
-.video-thumbnail-container .learn-more-button {
+.video-thumbnail-container .learn-more-button, .image-thumbnail-container .learn-more-button {
   top: 50%;
 }
 

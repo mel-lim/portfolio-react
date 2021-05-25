@@ -12,7 +12,7 @@ export const PernContent = () =>
 
         <p>Currently, Kit Collab delivers a listmaker tool aimed at backcountry-users to help them plan outings into the wilderness.</p>
 
-        <p>You can find Kit Collab deployed live <a href="https://kitcollab.netlify.app" target="_blank" rel="noreferrer noopener">here</a> via Netlify (front-end) and Heroku (back-end).</p>
+        <p>You can find Kit Collab deployed live <a href="https://kitcollab.netlify.app" target="_blank" rel="noreferrer noopener">here</a>. The front-end is hosted on Netlify and the back-end on Heroku.</p>
 
         <p>Please feel free to use the 'Try As Guest' feature, or sign up with an account for the ability to save your trips and lists.</p>
 
@@ -34,4 +34,6 @@ export const PernContent = () =>
                 <li>user-oriented focus, with load spinners and status messaging</li>
             </ul>
         </p>
+
+        <p>If you are interested in the code base, you will find the Github repo for the front-end <a href="https://github.com/mel-lim/persistent-listmaker-front-end" target="_blank" rel="noreferrer noopener">here</a>, and for the back-end <a href="https://github.com/mel-lim/listmaker-backend" target="_blank" rel="noreferrer noopener">here</a>.</p>
     </div>

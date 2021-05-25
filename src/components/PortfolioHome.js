@@ -9,12 +9,10 @@ import { HeroImageThumbnail } from "./portfolioHome/HeroImageThumbnail";
 
 import { Footer } from "./portfolioHome/Footer";
 
-import { pernWebApp, interactiveWebsite, javascriptGame, listmakerApp } from "../assets";
+import { pernWebApp, interactiveWebsite, javascriptGame, listmakerApp, portfolio } from "../assets";
 
 import profilePhotoStraight from '../resources/images/profile-photo-straight.jpeg';
 import profilePhotoIdeas from "../resources/images/profile-photo-ideas.jpeg";
-
-import portfolioThumbnail from "../resources/images/og-portfolio-thumbnail.png";
 
 export const PortfolioHome = () => {
     return (
@@ -39,6 +37,7 @@ export const PortfolioHome = () => {
             <HeroImageThumbnail keyword={pernWebApp.keyword}
                 image={pernWebApp.thumbnail}
                 altTag={pernWebApp.altTag}
+                labelName={pernWebApp.labelName}
                 url={pernWebApp.url} />
 
             <VideoThumbnail video={javascriptGame.video}
@@ -49,9 +48,11 @@ export const PortfolioHome = () => {
                 url={javascriptGame.url}
             />
 
-            <ImageThumbnail keyword="portfolio"
-                image={portfolioThumbnail}
-                altTag="portfolio"
+            <ImageThumbnail keyword={portfolio.keyword}
+                image={portfolio.image}
+                altTag={portfolio.altTag}
+                labelName={portfolio.labelName}
+                url={portfolio.url}
             />
 
             <VideoThumbnail video={listmakerApp.video}

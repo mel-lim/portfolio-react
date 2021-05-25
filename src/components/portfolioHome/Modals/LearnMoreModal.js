@@ -1,72 +1,56 @@
 import './Modal.css';
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Popup from "reactjs-popup";
 
 import { PernHeader, PernContent } from "./content/Pern";
 import { InteractiveWebsiteHeader, InteractiveWebsiteContent } from "./content/InteractiveWebsite";
+import { JavascriptGameHeader, JavascriptGameContent } from "./content/JavascriptGame";
+import { JSListmakerHeader, JSListmakerContent } from "./content/JSListmaker";
+import { PortfolioHeader, PortfolioContent } from "./content/Portfolio";
 
 export const LearnMoreModal = ({ keyword, openModal, setOpenModal, url }) => {
+    const [header, setHeader] = useState(null);
+    const [content, setContent] = useState(null);
+    const [buttonText, setButtonText] = useState(null);
 
-    const getHeader = keyword => {
+    useEffect(() => {
         switch (keyword) {
-
             case 'pern-web-app':
-                return <PernHeader />
+                setHeader(<PernHeader />);
+                setContent(<PernContent url={url} />);
+                setButtonText("Go to Kit Collab");
+                break;
 
             case 'interactive-website':
-                return <InteractiveWebsiteHeader />
+                setHeader(<InteractiveWebsiteHeader />);
+                setContent(<InteractiveWebsiteContent url={url} />);
+                setButtonText("Visit site");
+                break;
 
             case 'javascript-game':
-                return <PernHeader />
+                setHeader(<JavascriptGameHeader />);
+                setContent(<JavascriptGameContent url={url} />);
+                setButtonText("Let's play!");
+                break;
 
             case 'listmaker-app':
-                return <PernHeader />
+                setHeader(<JSListmakerHeader />);
+                setContent(<JSListmakerContent url={url} />);
+                setButtonText("Check it out")
+                break;
+
+            case 'portfolio':
+                setHeader(<PortfolioHeader />);
+                setContent(<PortfolioContent />);
+                setButtonText("Check it out")
+                break;
 
             default:
                 console.log("keyword not recognised");
         }
-    }
-
-    const getContent = keyword => {
-        switch (keyword) {
-
-            case 'pern-web-app':
-                return <PernContent url={url} />
-
-            case 'interactive-website':
-                return <InteractiveWebsiteContent url={url} />
-
-            case 'javascript-game':
-                return <PernContent />
-
-            case 'listmaker-app':
-                return <PernContent />
-
-            default:
-                console.log("keyword not recognised");
-        }
-    }
-
-    const getButtonText = keyword => {
-        switch (keyword) {
-
-            case 'pern-web-app':
-                return "Go to Kit Collab"
-
-            case 'interactive-website':
-                return "Visit site"
-
-            case 'javascript-game':
-                return <PernContent />
-
-            case 'listmaker-app':
-                return <PernContent />
-
-            default:
-                console.log("keyword not recognised");
-        }
-    }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const close = () => {
         console.log('modal closed');
@@ -77,17 +61,21 @@ export const LearnMoreModal = ({ keyword, openModal, setOpenModal, url }) => {
         <Popup open={openModal} closeOnDocumentClick onClose={close}>
             <div className="modal">
                 <button className="close" onClick={close}>&times;</button>
-                <div className="header">{getHeader(keyword)}</div>
+                <div className="header">{header}</div>
                 <div className="content">
-                    {getContent(keyword)}
+                    {content}
                 </div>
                 <div className="actions">
 
-                    <a href={url} target="_blank" rel="noreferrer noopener">
-                        <button className="pillbox-button lighten-on-hover-button modal-button">
-                            {getButtonText(keyword)}
-                        </button>
-                    </a>
+                    {
+                        url ?
+                            <a href={url} target="_blank" rel="noreferrer noopener">
+                                <button className="pillbox-button lighten-on-hover-button modal-button">
+                                    {buttonText}
+                                </button>
+                            </a>
+                            : null
+                    }
 
                     <button className="pillbox-button lighten-on-hover-button modal-button"
                         onClick={close} >

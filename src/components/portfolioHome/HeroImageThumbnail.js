@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { LearnMoreModal } from "./Modals/LearnMoreModal";
 
-export const HeroImageThumbnail = ({ keyword, image, altTag, url }) => {
+export const HeroImageThumbnail = ({ keyword, image, altTag, labelName, url }) => {
     const [showButton, setShowButton] = useState(false);
     const [openModal, setOpenModal] = useState(false);
 
@@ -19,7 +19,7 @@ export const HeroImageThumbnail = ({ keyword, image, altTag, url }) => {
             {
                 !showButton ?
                     <div className="circle-shape middle-circle">
-                        <p>Full-stack web application</p>
+                        <p>{labelName}</p>
                     </div>
                     : <button id={`learn-more-${keyword}`}
                         className="learn-more-button pillbox-button"

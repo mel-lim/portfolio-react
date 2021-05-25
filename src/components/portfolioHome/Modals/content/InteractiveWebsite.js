@@ -18,7 +18,9 @@ export const InteractiveWebsiteContent = ({ url }) =>
                 <li>sticky navigation bar</li>
                 <li>interactive information display</li>
                 <li>'jump-to' sections</li>
-                <li>DOM manipulation</li>
+                <li>javascript DOM manipulation</li>
             </ul>
         </p>
+
+        <p>To see the code, take a look at the Github <a href="https://github.com/mel-lim/adventure-website" target="_blank" rel="noreferrer noopener">repo</a>.</p>
     </div>
