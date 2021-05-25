@@ -1,5 +1,4 @@
 .modal {
-    font-family: 'Zilla Slab', serif;
     font-size: 12px;
     background-color: whitesmoke;
     padding: 1rem;
@@ -8,9 +7,8 @@
 
 .modal>.header {
     border-bottom: 1px solid gray;
-    font-size: 18px;
     text-align: center;
-    padding: 5px;
+    padding: 10px;
 }
 
 .modal>.content {

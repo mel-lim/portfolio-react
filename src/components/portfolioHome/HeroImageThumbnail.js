@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
-import { PernModal } from "./Modals/PernModal";
+import { LearnMoreModal } from "./Modals/LearnMoreModal";
 
 export const HeroImageThumbnail = ({ keyword, image, altTag, url }) => {
     const [showButton, setShowButton] = useState(false);
@@ -27,7 +26,7 @@ export const HeroImageThumbnail = ({ keyword, image, altTag, url }) => {
                         onClick={() => setOpenModal(true)}>Learn more</button>
             }
 
-            <PernModal keyword={keyword} openModal={openModal} setOpenModal={setOpenModal} />
+            <LearnMoreModal keyword={keyword} openModal={openModal} setOpenModal={setOpenModal} url={url} />
 
         </div>
     )

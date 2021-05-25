@@ -7,8 +7,8 @@ export const Intro = () => {
             <h2>Hello, I'm Mel.</h2>
             <p>I'm an Australian web developer with a background in biomedical engineering and law from the University of Sydney.</p>
             <p>Welcome to my portfolio. I invite you to click around and take a look at my work.</p>
-            <p>Do come back periodically to check out my new projects and further developments on pre-existing projects.</p>
-            <p>If you'd like to work with me, or just want to say hi, please do get in touch. I'd be very pleased to hear from you.</p>
+            <p>Do come back periodically to check out new projects and further developments on my pre-existing projects.</p>
+            <p>If you would like to work with me, or want to say hi, please don't hesitate to send me a note.</p>
 
             <Link to="/contact">
                 <button id="get-in-touch-button" className="pillbox-button lighten-on-hover-button">Get in touch</button>

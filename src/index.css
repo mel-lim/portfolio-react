@@ -18,6 +18,12 @@ h3 {
   font-family: 'Dosis', sans-serif;
 }
 
+h4 {
+  font-family: 'Zilla Slab', serif;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
 p {
   font-family: 'Dosis', sans-serif;
   font-weight: lighter;
@@ -31,13 +37,6 @@ button {
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;
-}
-
-.click-to-enlarge-button p, .thumbnail-label p {
-  font-size: 0.6rem;
-  line-height: 1;
-  margin: 0;
-  font-weight: bolder;
 }
 
 #contact-form input[type=text], #contact-form textarea {
@@ -158,13 +157,6 @@ footer {
   align-items: center;
 }
 
-.pillbox-button {
-  cursor: pointer;
-  border: solid 1.5px hsl(203, 3%, 20%);
-  border-radius: 20px;
-  padding: 5px 10px;
-}
-
 #get-in-touch-button {
   background-color: hsl(0, 0%, 94%);
   color: hsl(203, 3%, 20%);
@@ -206,8 +198,14 @@ footer {
 
 header {
   text-align: center;
-  color: hsl(32, 49%, 92%);
 }
+
+header a {
+  color: hsl(32, 49%, 92%);
+  text-decoration: none;
+}
+
+/* Footer */
 
 footer {
   margin: 0;
@@ -263,6 +261,30 @@ footer p {
   background-color: hsl(203, 3%, 20%);
   color: #B3BFBC;
   border: solid 1px hsl(203, 3%, 20%);
+}
+
+/* Video thumbnails */
+.video-thumbnail-container {
+  position: relative;
+}
+
+.thumbnail-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: hsl(203, 3%, 20%);
+  opacity: 1;
+  border: solid 1.5px hsl(203, 3%, 20%);
+  border-radius: 3px;
+  padding: 10px;
+  text-align: center;
+  align-items: baseline;
+}
+
+.video-thumbnail-container .learn-more-button {
+  top: 50%;
 }
 
 /* Breakpoint 750px */
