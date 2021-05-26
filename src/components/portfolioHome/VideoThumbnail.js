@@ -34,7 +34,7 @@ export const VideoThumbnail = ({ video, keyword, altTag, altImg, labelName, url 
                     <button id={`${keyword}-learn-more-button`}
                         className="learn-more-button pillbox-button"
                         onClick={() => setOpenModal(true)}>
-                        <p id={`${keyword}-enlarge-button-p`}>Learn more</p>
+                        Learn more
                     </button>
             }
 

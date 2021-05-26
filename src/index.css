@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Dosis&family=Zilla+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Maven+Pro&family=Zilla+Slab:wght@300&display=swap');
 
 /* Font styles */
 
@@ -15,7 +15,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
 }
 
 h4 {
@@ -25,28 +25,22 @@ h4 {
 }
 
 p {
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
   font-weight: lighter;
   font-size: 1rem;
   line-height: 1.25;
   margin: 0;
 }
 
-button {
+button, input[type=submit] {
   font-family: 'Zilla Slab', serif;
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;
 }
 
-#contact-form input[type=text], #contact-form textarea {
-  font-family: 'Dosis', sans-serif;
-}
-
-#contact-form input[type=submit] {
-  font-family: 'Neucha', cursive;
-  line-height: 1;
-  margin: 0;
+input[type=text], input[type=email], textarea {
+  font-family: 'Maven Pro', sans-serif;
 }
 
 /* General styles */
@@ -69,6 +63,19 @@ body {
   border: solid 1.5px hsl(203, 3%, 20%);
   border-radius: 20px;
   padding: 5px 10px;
+}
+
+.contact-button {
+  background-color: hsl(0, 0%, 94%);
+  color: black;
+  margin-right: 10px;
+}
+
+.contact-button:hover {
+  border: solid 1.5px hsl(203, 3%, 20%);
+  background-color: white;
+  color: black;
+  filter: brightness(140%);
 }
 
 footer {
@@ -142,7 +149,8 @@ footer {
 
 #intro-container {
   background-color: hsl(32, 49%, 92%);
-  color: hsl(203, 3%, 20%);
+  /* color: hsl(203, 3%, 20%); */
+  color: black;
   box-sizing: border-box;
   padding: 5% 7.5% 6.5% 7.5%;
   border-radius: 2px;
@@ -155,19 +163,6 @@ footer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-}
-
-#get-in-touch-button {
-  background-color: hsl(0, 0%, 94%);
-  color: hsl(203, 3%, 20%);
-  margin-right: 10px;
-}
-
-.lighten-on-hover-button:hover {
-  border: solid 1.5px hsl(203, 3%, 20%);
-  background-color: white;
-  color: hsl(240, 2%, 11%);
-  filter: brightness(140%);
 }
 
 .social-media-icon {
@@ -255,7 +250,6 @@ footer p {
   background-color: hsl(204, 24%, 92%);
   font-size: 1rem;
   color: hsl(203, 3%, 20%);
-
 }
 
 .learn-more-button:hover {
@@ -286,6 +280,82 @@ footer p {
 
 .video-thumbnail-container .learn-more-button, .image-thumbnail-container .learn-more-button {
   top: 50%;
+}
+
+/* Contact Form */
+
+#contact-main {
+  margin-top: 40px;
+}
+
+#contact-main a {
+  text-decoration: none;
+}
+
+#contact-form-container h1 {
+  color: hsl(203, 3%, 20%);
+}
+
+#contact-form-container {
+  max-width: 600px;
+  border: 1px solid black;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  vertical-align: top;
+  background-color: hsl(32, 49%, 92%);
+  color: black;
+  text-align: center;
+  margin: 1rem auto 2rem auto;
+}
+
+#contact-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form-row {
+  width: 94%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+#name {
+  width: 37%;
+  margin-right: 3%;
+}
+
+#email {
+  width: 50%;
+}
+
+#subject {
+  width: 100%;
+}
+
+#message {
+  width: 100%;
+}
+
+#contact-form input[type=text], #contact-form textarea {
+  padding: 5px 10px;
+}
+
+#contact-form textarea {
+  height: 175px;
+  resize: vertical;
+}
+
+#submit-row {
+  justify-content: flex-end;
+}
+
+#contact-form .contact-button {
+  width: 160px;
+}
+
+#contact-submission-status {
+  margin: 1rem;
 }
 
 /* Breakpoint 750px */
