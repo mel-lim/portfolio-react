@@ -19,7 +19,8 @@ export const Contact = () => {
             name: name.value,
             email: email.value,
             subject: subject.value,
-            message: message.value
+            message: message.value,
+            source: "Mel Lim Portfolio"
         }
 
         try {
