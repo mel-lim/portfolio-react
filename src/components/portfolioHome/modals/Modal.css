@@ -40,7 +40,7 @@
 
 .modal-button {
     width: 140px;
-    margin: 0 10px; 
+    margin: 5px 7px;
 }
 
 .modal>.close {
@@ -58,6 +58,7 @@
 }
 
 /* Natural breakpoint 875px */
+
 @media only screen and (max-width: 874px) {
     .modal {
         margin-left: 18px;
