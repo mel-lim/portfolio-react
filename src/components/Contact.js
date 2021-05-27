@@ -81,7 +81,7 @@ export const Contact = () => {
                     <div className="form-row" id="submit-row">
 
                         <Link to="/">
-                            <button className="pillbox-button contact-button">Return to portfolio</button>
+                            <button className="pillbox-button contact-button">Back to portfolio</button>
                         </Link>
 
                         <input type="submit"

@@ -148,16 +148,25 @@
     .thumbnail-label p, .learn-more-button {
         font-size: 0.55rem;
     }
-    #contact-form-container {
-        margin-left: 10px;
-        margin-right: 10px;
+
+    #contact-main {
+        padding: 0 10px;
     }
 }
 
 /* Natural breakpoint 603px */
 @media only screen and (max-width: 603px) {
+
     .thumbnail-label p, .learn-more-button {
         font-size: 0.5rem;
+    }
+
+    #submit-row {
+        justify-content: center;
+    }
+
+    #contact-main .contact-button {
+        margin: 0 5px;
     }
 }
 
