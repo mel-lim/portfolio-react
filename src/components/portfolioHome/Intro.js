@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Intro = () => {
     return (
-        <div id="intro-container">
+        <div id="intro-container" className="zoom">
             <h2>Hello, I'm Mel.</h2>
             <p>I'm an Australian web developer with a background in biomedical engineering and law from the University of Sydney.</p>
             <p>Welcome to my portfolio. I invite you to click around and take a look at my work.</p>
