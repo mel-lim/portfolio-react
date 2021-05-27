@@ -315,7 +315,7 @@
 /* Natural breakpoint 454px */
 @media only screen and (max-width: 454px) {
     #portfolio-main {
-        grid-template-rows: 13vw 100vw repeat(7, 84vw) 10vw 10vw;
+        grid-template-rows: 13vw 100vw repeat(7, 94vw) 10vw 10vw;
     }
     .middle-circle {
         width: 41%;
@@ -332,7 +332,7 @@
 /* Natural breakpoint 444px */
 @media only screen and (max-width: 444px) {
     #portfolio-main {
-        grid-template-rows: 16vw 120vw repeat(7, 84vw) 10vw;
+        grid-template-rows: 16vw 120vw repeat(7, 94vw) 10vw;
     }
     .middle-circle {
         width: 43%;
@@ -344,7 +344,7 @@
 @media only screen and (max-width: 399px) {
     #portfolio-main {
         margin-top: 22px;
-        grid-template-rows: 18vw 120vw repeat(7, 84vw) 12vw 10vw;
+        grid-template-rows: 18vw 120vw repeat(7, 94vw) 12vw 10vw;
     }
     
     .middle-circle {
@@ -367,7 +367,7 @@
 
 @media only screen and (max-width: 358px) {
     #portfolio-main {
-        grid-template-rows: 18vw 130vw repeat(7, 84vw) 14vw 10vw;
+        grid-template-rows: 18vw 130vw repeat(7, 94vw) 14vw 10vw;
     }
     .middle-circle {
         width: 52%;
@@ -380,7 +380,7 @@
 
 @media only screen and (max-width: 334px) {
     #portfolio-main {
-        grid-template-rows: 18vw 130vw repeat(7, 84vw) 14vw 10vw;
+        grid-template-rows: 18vw 130vw repeat(7, 94vw) 14vw 10vw;
     }
     
     .learn-more-button {
