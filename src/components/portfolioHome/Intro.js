@@ -13,7 +13,7 @@ export const Intro = () => {
             <p>Do come back periodically to check out new projects and further developments on my pre-existing projects.</p>
             <p>If you would like to work with me, or want to say hi, please don't hesitate to send me a note.</p>
 
-            <Link to="/contact" activeClassName="button-link contact-link">
+            <Link to="/contact">
                 <button id="get-in-touch-button" className="pillbox-button contact-button">Get in touch</button>
             </Link>
 
