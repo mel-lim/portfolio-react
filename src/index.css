@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Maven+Pro&family=Zilla+Slab:wght@300&display=swap');
-
 /* Font styles */
 
 h1 {
   font-family: 'Zilla Slab', serif;
   font-size: 3rem;
-  margin: 1.75rem 0 0 0;
+  margin: 7% 0 0 0;
 }
 
 h2 {
@@ -27,20 +26,30 @@ h4 {
 p {
   font-family: 'Maven Pro', sans-serif;
   font-weight: lighter;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.25;
   margin: 0;
 }
 
-button, input[type=submit] {
+button {
   font-family: 'Zilla Slab', serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  margin: 0;
+  white-space: nowrap;
+  text-align: center;
+}
+
+button, input[type=submit], .thumbnail-label p, .circle-shape p {
+  font-family: 'Zilla Slab', serif;
+  font-size: 0.9rem;
   line-height: 1.5;
   margin: 0;
+  text-align: center;
 }
 
 input[type=text], input[type=email], textarea {
   font-family: 'Maven Pro', sans-serif;
+  font-size: 0.85rem;
 }
 
 /* General styles */
@@ -58,15 +67,55 @@ body {
   border-radius: 2px;
 }
 
+.zoom {
+  transition: transform .1s;
+  /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(1.018);
+}
+
+.label-button-container {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline;
+  text-align: center;
+}
+
+.mobile-label-button-container {
+  display: none;
+}
+
 .pillbox-button {
   cursor: pointer;
   border: solid 1.5px hsl(203, 3%, 20%);
   border-radius: 20px;
   padding: 5px 10px;
+  background-color: hsl(0, 0%, 94%);
+}
+
+.learn-more-button {
+  position: absolute; 
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: hsl(203, 3%, 20%);
+}
+
+.learn-more-button:hover {
+  background-color: hsl(203, 3%, 20%);
+  color: #B3BFBC;
+  border: solid 1px hsl(203, 3%, 20%);
+}
+
+.tablet-label-button-container {
+  display: none;
 }
 
 .contact-button {
-  background-color: hsl(0, 0%, 94%);
   color: black;
   margin-right: 10px;
 }
@@ -152,11 +201,11 @@ footer {
   /* color: hsl(203, 3%, 20%); */
   color: black;
   box-sizing: border-box;
-  padding: 5% 7.5% 6.5% 7.5%;
+  padding: 1.5rem;
   border-radius: 2px;
   display: flex;
   flex-wrap: wrap;
-  align-content: space-around;
+  align-content: space-between;
 }
 
 #buttons-container {
@@ -211,8 +260,13 @@ footer p {
 }
 
 /* Hero image */
+
 .hero-image-container {
   position: relative;
+}
+
+.mobile-circular-label-container {
+  display: none;
 }
 
 .middle-circle {
@@ -237,37 +291,22 @@ footer p {
 }
 
 .hero-image-container p {
-  font-size: 1rem;
   text-align: center;
   margin: 0;
 }
 
-.learn-more-button {
-  position: absolute;
+.hero-image-container .learn-more-button {
   top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: hsl(204, 24%, 92%);
-  font-size: 1rem;
-  color: hsl(203, 3%, 20%);
-}
-
-.learn-more-button:hover {
-  background-color: hsl(203, 3%, 20%);
-  color: #B3BFBC;
-  border: solid 1px hsl(203, 3%, 20%);
+  left: 50%; 
 }
 
 /* Video and image thumbnails */
+
 .video-thumbnail-container, .image-thumbnail-container {
   position: relative;
 }
 
 .thumbnail-label {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color: white;
   color: hsl(203, 3%, 20%);
   opacity: 1;
@@ -278,8 +317,8 @@ footer p {
   align-items: baseline;
 }
 
-.video-thumbnail-container .learn-more-button, .image-thumbnail-container .learn-more-button {
-  top: 50%;
+.video-thumbnail-container .mobile-circular-label-container, .image-thumbnail-container .mobile-circular-label-container {
+  display: none;
 }
 
 /* Contact Form */
@@ -329,15 +368,11 @@ footer p {
   width: 50%;
 }
 
-#subject {
+#subject, #message {
   width: 100%;
 }
 
-#message {
-  width: 100%;
-}
-
-#contact-form input[type=text], #contact-form textarea {
+#contact-form input[type=text], #contact-form input[type=email], #contact-form textarea {
   padding: 5px 10px;
 }
 
@@ -351,20 +386,10 @@ footer p {
 }
 
 #contact-form .contact-button {
-  width: 160px;
+  width: 140px;
 }
 
 #contact-submission-status {
   margin: 1rem;
 }
 
-/* Breakpoint 750px */
-
-@media only screen and (min-width: 1050px) {
-  /* Main grid items layout and appearance */
-  #portfolio-main {
-    width: 900px;
-    grid-template-columns: repeat(8, 94.5px);
-    grid-template-rows: repeat(12, 94.5px);
-  }
-}

@@ -1,9 +1,16 @@
+.hero-image-container {
+    height: 100%;
+}
+
 .modal {
     font-size: 12px;
     background-color: whitesmoke;
     padding: 1rem;
     border: solid 1.5px hsl(203, 3%, 20%);
     max-width: 850px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .modal>.header {
@@ -26,7 +33,6 @@
 }
 
 .modal>.actions {
-    width: 100%;
     padding: 10px 5px;
     margin: auto;
     text-align: center;
@@ -41,12 +47,20 @@
     cursor: pointer;
     position: absolute;
     display: block;
-    padding: 2px 5px;
-    line-height: 20px;
-    right: -10px;
-    top: -10px;
+    padding: 0 6.5px;
+    line-height: 1;
+    right: 10px;
+    top: 10px;
     font-size: 24px;
     background: #ffffff;
-    border-radius: 18px;
+    border-radius: 2px;
     border: 1px solid #cfcece;
+}
+
+/* Natural breakpoint 875px */
+@media only screen and (max-width: 874px) {
+    .modal {
+        margin-left: 18px;
+        margin-right: 18px;
+    }
 }

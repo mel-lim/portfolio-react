@@ -1,18 +1,23 @@
 import React, { useState } from "react";
 
-import { LearnMoreModal } from "./Modals/LearnMoreModal";
+import { ThumbnailLabelContainer } from "./labels/ThumbnailLabelContainer";
+import { ThumbnailLabelContainerMobile } from "./labels/ThumbnailLabelContainerMobile";
+import { CircularLabelContainerMobile } from "./labels/CircularLabelContainerMobile";
+import { LearnMoreModal } from "./modals/LearnMoreModal";
 
 export const VideoThumbnail = ({ video, keyword, altTag, altImg, labelName, url }) => {
-    const [showButton, setShowButton] = useState(false);
+    
     const [openModal, setOpenModal] = useState(false);
+    const [showButton, setShowButton] = useState(false);
 
     return (
         <div id={`${keyword}-container`}
             className="video-thumbnail-container"
             onMouseEnter={() => setShowButton(true)}
             onMouseLeave={() => setShowButton(false)}>
+
             <video id={`${keyword}-video`}
-                className="embedded-media thumbnail-video"
+                className="embedded-media thumbnail-video zoom"
                 muted
                 loop={true}
                 autoPlay
@@ -24,19 +29,17 @@ export const VideoThumbnail = ({ video, keyword, altTag, altImg, labelName, url 
                 <img src={altImg}
                     alt={`video not supported, ${altTag} thumbnail`} />
             </video>
-            {
-                !showButton ?
 
-                    <div className='thumbnail-label'>
-                        <p>{labelName}</p>
-                    </div>
-                    :
-                    <button id={`${keyword}-learn-more-button`}
-                        className="learn-more-button pillbox-button"
-                        onClick={() => setOpenModal(true)}>
-                        Learn more
-                    </button>
-            }
+            <ThumbnailLabelContainer showButton={showButton}
+                labelName={labelName}
+                setOpenModal={setOpenModal}
+            />
+            <ThumbnailLabelContainerMobile labelName={labelName}
+                setOpenModal={setOpenModal}
+            />
+
+            <CircularLabelContainerMobile labelName={labelName}
+                setOpenModal={setOpenModal} />
 
             <LearnMoreModal keyword={keyword} openModal={openModal} setOpenModal={setOpenModal} url={url} />
         </div>

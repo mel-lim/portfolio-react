@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
-import { LearnMoreModal } from "./Modals/LearnMoreModal";
+import { ThumbnailLabelContainer } from "./labels/ThumbnailLabelContainer";
+import { ThumbnailLabelContainerMobile } from "./labels/ThumbnailLabelContainerMobile";
+import { CircularLabelContainerMobile } from "./labels/CircularLabelContainerMobile";
+import { LearnMoreModal } from "./modals/LearnMoreModal";
 
 export const ImageThumbnail = ({ keyword, image, altTag, labelName, url }) => {
     const [showButton, setShowButton] = useState(false);
@@ -12,22 +15,19 @@ export const ImageThumbnail = ({ keyword, image, altTag, labelName, url }) => {
             onMouseEnter={() => setShowButton(true)}
             onMouseLeave={() => setShowButton(false)}>
             <img src={image}
-                className="embedded-media"
+                className="embedded-media zoom"
                 alt={altTag} />
 
-            {
-                !showButton ?
+            <ThumbnailLabelContainer showButton={showButton}
+                labelName={labelName}
+                setOpenModal={setOpenModal}
+            />
+            <ThumbnailLabelContainerMobile labelName={labelName}
+                setOpenModal={setOpenModal}
+            />
 
-                    <div className='thumbnail-label'>
-                        <p>{labelName}</p>
-                    </div>
-                    :
-                    <button id={`${keyword}-learn-more-button`}
-                        className="learn-more-button pillbox-button"
-                        onClick={() => setOpenModal(true)}>
-                        Learn more
-                    </button>
-            }
+            <CircularLabelContainerMobile labelName={labelName}
+                setOpenModal={setOpenModal} />
 
             <LearnMoreModal keyword={keyword} openModal={openModal} setOpenModal={setOpenModal} url={url} />
         </div>
