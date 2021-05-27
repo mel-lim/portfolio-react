@@ -319,7 +319,7 @@
     }
     .middle-circle {
         width: 41%;
-        height: 45%;
+        height: 41%;
     }
     .hero-image-container .middle-circle {
         top: 50%;
@@ -336,7 +336,7 @@
     }
     .middle-circle {
         width: 43%;
-        height: 47%;
+        height: 43%;
     }
 }
 
@@ -349,7 +349,7 @@
     
     .middle-circle {
         width: 45%;
-        height: 50%;
+        height: 45%;
     }
 }
 
@@ -357,7 +357,7 @@
 @media only screen and (max-width: 382px) {
     .middle-circle {
         width: 48%;
-        height: 53%;
+        height: 48%;
     }
 
     footer p {
@@ -371,7 +371,7 @@
     }
     .middle-circle {
         width: 52%;
-        height: 57%;
+        height: 52%;
     }
     .learn-more-button {
         top: 64.5% !important;
