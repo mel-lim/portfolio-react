@@ -10,6 +10,14 @@
 
 /* Tablet breakpoint 768px (loss of mouse) */
 @media only screen and (max-width: 768px) {
+    /* Turn off zoom */
+    .zoom {
+        transition: none;
+      }
+      
+    .zoom:hover {
+        transform: none;
+    }
 
     /* Intro container and contact icons container */
     svg {
@@ -192,8 +200,8 @@
 @media only screen and (max-width: 564px) {
     #portfolio-main {
         margin-top: 27px;
-        grid-template-columns: 84vw;
-        grid-template-rows: 12vw repeat(8, 84vw) 10vw;
+        grid-template-columns: 94vw;
+        grid-template-rows: 12vw repeat(8, 94vw) 10vw;
         grid-template-areas: 
         "header  " 
         "intro   " 
