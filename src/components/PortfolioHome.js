@@ -6,7 +6,7 @@ import { ProfilePhoto } from "./portfolioHome/ProfilePhoto";
 import { VideoThumbnail } from "./portfolioHome/VideoThumbnail";
 import { ImageThumbnail } from "./portfolioHome/ImageThumbnail";
 import { HeroImageThumbnail } from "./portfolioHome/HeroImageThumbnail";
-
+import { ContactIcons } from "./ContactIcons";
 import { Footer } from "./Footer";
 
 import { pernWebApp, interactiveWebsite, javascriptGame, listmakerApp, portfolio } from "../assets";
@@ -67,6 +67,7 @@ export const PortfolioHome = () => {
                 image={profilePhotoIdeas}
                 altTag="mel lim secondary profile photo" />
 
+            <ContactIcons />
             <Footer />
         </main>
     )
