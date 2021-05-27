@@ -151,13 +151,16 @@
         font-size: 3rem;
         margin: 0;
     }
+
     h2 {
         font-size: 2rem;
     }
-    p {
+
+    #intro-container p, input[type=text], input[type=email], textarea {
         font-size: 1rem;
     }
-    button {
+
+    #get-in-touch-button {
         font-size: 1rem;
     }
     footer {
