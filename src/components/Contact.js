@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { LoadSpinner } from "./LoadSpinner/LoadSpinner";
+import { Footer } from "./Footer";
 
 import { delay, sendMessageApi } from "../api";
 
@@ -97,6 +98,8 @@ export const Contact = () => {
                     : null
             }
             </div>
+
+            <Footer />
         </main>
     )
 }

@@ -7,7 +7,7 @@ import { VideoThumbnail } from "./portfolioHome/VideoThumbnail";
 import { ImageThumbnail } from "./portfolioHome/ImageThumbnail";
 import { HeroImageThumbnail } from "./portfolioHome/HeroImageThumbnail";
 
-import { Footer } from "./portfolioHome/Footer";
+import { Footer } from "./Footer";
 
 import { pernWebApp, interactiveWebsite, javascriptGame, listmakerApp, portfolio } from "../assets";
 
