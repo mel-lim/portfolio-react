@@ -1,6 +1,6 @@
 /* Font styles */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Maven+Pro&family=Zilla+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Maven+Pro&family=Zilla+Slab:wght@300;600&display=swap');
 h1 {
   font-family: 'Zilla Slab', serif;
   font-size: 3rem;
@@ -131,11 +131,11 @@ footer {
   margin: 40px auto 20px auto;
   display: grid;
   width: 85%;
-  grid-template-columns: repeat(8, 10.5vw);
-  grid-template-rows: repeat(12, 10.5vw);
+  grid-template-columns: repeat(8, 8.5vw);
+  grid-template-rows: repeat(12, 8.5vw);
   grid-template-areas: "intro      intro       intro         intro     intro     header    header    header" "intro      intro       intro         intro     intro     photo     photo     photo" "intro      intro       intro         intro     intro     photo     photo     photo" "intro      intro       intro         intro     intro     photo     photo     photo" "interactive interactive interactive  pern      pern      pern      pern      pern" "interactive interactive interactive  pern      pern      pern      pern      pern" "interactive interactive interactive  pern      pern      pern      pern      pern" "game       game        game          pern      pern      pern      pern      pern" "game       game        game          pern      pern      pern      pern      pern" "game       game        game          listmaker listmaker listmaker secondary secondary" "contact          portfolio   portfolio     listmaker listmaker listmaker secondary secondary" "contact          portfolio   portfolio     listmaker listmaker listmaker footer    footer";
-  column-gap: 7px;
-  row-gap: 7px;
+  column-gap: 20px;
+  row-gap: 20px;
   justify-content: center;
 }
 
@@ -184,10 +184,8 @@ header a {
   margin-right: 10px;
 }
 
-.contact-button:hover {
+.contact-button {
   border: solid 1.5px hsl(203, 3%, 20%);
-  background-color: white;
-  color: black;
   filter: brightness(140%);
 }
 
@@ -254,12 +252,14 @@ svg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: hsl(203, 3%, 20%);
+  background-color: hsl(203, 3%, 20%);
+  color: hsl(32, 49%, 92%); 
+  border: 1.5px hsl(32, 49%, 92%) solid;
 }
 
 .learn-more-button:hover {
-  background-color: hsl(203, 3%, 20%);
-  color: #B3BFBC;
+  color: hsl(203, 3%, 20%);
+  background-color: hsl(32, 49%, 92%); 
   border: solid 1px hsl(203, 3%, 20%);
 }
 
@@ -275,14 +275,15 @@ svg {
   transform: translate(-50%, -50%);
   width: 30%;
   height: 30%;
+  border: 1.5px hsl(32, 49%, 92%) solid;
 }
 
 .circle-shape {
   display: flex;
   flex-wrap: wrap;
-  border: solid 1.5px hsl(203, 3%, 20%);
-  background-color: white;
-  color: hsl(203, 3%, 20%);
+  /* border: solid 1.5px hsl(203, 3%, 20%); */
+  background-color: hsl(203, 3%, 20%);
+  color: hsl(32, 49%, 92%);
   border-radius: 50%;
   justify-content: center;
   align-content: center;
@@ -299,10 +300,11 @@ svg {
 }
 
 .thumbnail-label {
-  background-color: white;
-  color: hsl(203, 3%, 20%);
+  /* background-color: white; */
+  background-color: hsl(203, 3%, 20%);
+  color: hsl(32, 49%, 92%);
   opacity: 1;
-  border: solid 1.5px hsl(203, 3%, 20%);
+  border: 1.5px hsl(32, 49%, 92%) solid;
   border-radius: 3px;
   padding: 10px;
   text-align: center;

@@ -1,47 +1,89 @@
 /* Larger screen sizes */
-@media only screen and (min-width: 1050px) {
+
+@media only screen and (min-width: 950px) /* and (max-width: 1214px) */ {
     /* Main grid items layout and appearance */
     #portfolio-main {
-        width: 900px;
-        grid-template-columns: repeat(8, 94.5px);
-        grid-template-rows: repeat(12, 94.5px);
+        grid-template-columns: repeat(12, 5.5vw);
+        grid-template-rows: repeat(13, 5.5vw);
+        grid-template-areas: 
+        ".          intro            intro        intro       intro        intro     intro     intro    header    header    header    ." 
+        ".          intro            intro        intro       intro        intro     intro     intro     photo     photo     photo  ." 
+        ".          intro            intro        intro       intro        intro     intro     intro     photo     photo     photo   ."  
+        ".          intro            intro        intro       intro        intro     intro     intro     photo     photo    photo    ."  
+        "interactive interactive interactive  interactive pern         pern      pern      pern      pern      game      game    game" 
+        "interactive interactive interactive  interactive pern         pern      pern      pern      pern      game      game    game" 
+        "interactive interactive interactive  interactive pern         pern      pern      pern      pern      game      game    game" 
+        "interactive interactive interactive  interactive pern         pern      pern      pern      pern      secondary secondary ." 
+        ".           listmaker   listmaker    listmaker   pern         pern      pern      pern      pern      secondary secondary ." 
+        ".           listmaker   listmaker    listmaker   portfolio    portfolio portfolio portfolio contact    .           .       ." 
+        ".           listmaker   listmaker    listmaker   portfolio    portfolio portfolio portfolio contact    .           .       ."
+        ".          footer       footer       footer    portfolio    portfolio portfolio portfolio contact    .           .       ."
+        ".          footer       footer        footer     portfolio    portfolio portfolio portfolio contact    .           .       .";
+        column-gap: 25px;
+        row-gap: 25px;
+    }
+
+    .contact-icons-container a {
+        margin: 8px 0;
     }
 }
 
+@media only screen and (min-width: 1215px) {
+    /* Main grid items layout and appearance */
+    #portfolio-main {
+        grid-template-columns: repeat(12, 5.5vw);
+        grid-template-rows: repeat(13, 5.5vw);
+        grid-template-areas: 
+        ".          .            intro        intro       intro        intro     intro     header    header    header    .       ." 
+        ".          .            intro        intro       intro        intro     intro     photo     photo     photo     .       ." 
+        ".          .            intro        intro       intro        intro     intro     photo     photo     photo     .       ."  
+        ".          .            intro        intro       intro        intro     intro     photo     photo     photo     .       ."  
+        "interactive interactive interactive  interactive pern         pern      pern      pern      pern      game      game    game" 
+        "interactive interactive interactive  interactive pern         pern      pern      pern      pern      game      game    game" 
+        "interactive interactive interactive  interactive pern         pern      pern      pern      pern      game      game    game" 
+        "interactive interactive interactive  interactive pern         pern      pern      pern      pern      secondary secondary ." 
+        ".           listmaker   listmaker    listmaker   pern         pern      pern      pern      pern      secondary secondary ." 
+        ".           listmaker   listmaker    listmaker   portfolio    portfolio portfolio portfolio contact    .           .       ." 
+        ".           listmaker   listmaker    listmaker   portfolio    portfolio portfolio portfolio contact    .           .       ."
+        ".          footer       footer       footer    portfolio    portfolio portfolio portfolio contact    .           .       ."
+        ".          footer       footer        footer     portfolio    portfolio portfolio portfolio contact    .           .       .";
+        column-gap: 25px;
+        row-gap: 25px;
+    }
+}
+
+/* Smaller screen sizes */
+
 @media only screen and (max-width: 849px) {
     .middle-circle {
-        width: 31%; 
+        width: 31%;
     }
 }
 
 /* Tablet breakpoint 768px (loss of mouse) */
+
 @media only screen and (max-width: 768px) {
     /* Turn off zoom */
     .zoom {
         transition: none;
-      }
-      
+    }
     .zoom:hover {
         transform: none;
     }
-
     /* Intro container and contact icons container */
     svg {
         height: 2.3rem;
         width: 2.3rem;
     }
-
+    
     #intro-container a, .contact-icons-container a {
         height: 2.3rem;
     }
-
     .contact-icon a, .contact-icon svg {
         height: 2.4rem;
         width: 2.4rem
     }
-
     /* Hero Image, Video and Image Thumbnails */
-    
     .middle-circle p, .circle-when-tablet p, .thumbnail-label p, .learn-more-button {
         font-size: 0.7rem;
     }
@@ -75,38 +117,22 @@
 }
 
 /* Natural breakpoint 750px */
+
 @media only screen and (max-width: 750px) {
     #portfolio-main {
-        grid-template-areas: 
-        "intro   intro    intro      intro      intro     header      header      header" 
-        "intro   intro    intro      intro      intro     photo       photo       photo" 
-        "intro   intro    intro      intro      intro     photo       photo       photo" 
-        "intro   intro    intro      intro      intro     photo       photo       photo" 
-        "intro   intro    intro      intro      intro     interactive interactive interactive" 
-        "pern    pern     pern       pern       pern      interactive interactive interactive" 
-        "pern    pern     pern       pern       pern      interactive interactive interactive" 
-        "pern    pern     pern       pern       pern      game        game        game" 
-        "pern    pern     pern       pern       pern      game        game        game" 
-        "pern    pern     pern       pern       pern      game        game        game" 
-        "contact  contact   portfolio  portfolio  listmaker listmaker   secondary   secondary " 
-        "footer footer  portfolio  portfolio  listmaker listmaker   secondary   secondary ";
+        grid-template-areas: "intro   intro    intro      intro      intro     header      header      header" "intro   intro    intro      intro      intro     photo       photo       photo" "intro   intro    intro      intro      intro     photo       photo       photo" "intro   intro    intro      intro      intro     photo       photo       photo" "intro   intro    intro      intro      intro     interactive interactive interactive" "pern    pern     pern       pern       pern      interactive interactive interactive" "pern    pern     pern       pern       pern      interactive interactive interactive" "pern    pern     pern       pern       pern      game        game        game" "pern    pern     pern       pern       pern      game        game        game" "pern    pern     pern       pern       pern      game        game        game" "contact  contact   portfolio  portfolio  listmaker listmaker   secondary   secondary " "footer footer  portfolio  portfolio  listmaker listmaker   secondary   secondary ";
     }
-
     h1 {
         margin-top: 4%;
     }
-
     .contact-icons-container {
         flex-direction: row;
         align-items: flex-end;
         justify-content: center;
     }
-
     .contact-icons-container a {
         margin: 0 4px;
-
     }
-
     .contact-icon a, .contact-icon svg {
         height: 2.5rem;
         width: 2.5rem;
@@ -114,30 +140,27 @@
 }
 
 /* Natural breakpoint 715px */
-@media only screen and (max-width: 715px) {
 
+@media only screen and (max-width: 715px) {
     .thumbnail-label p, .learn-more-button {
         font-size: 0.6rem;
     }
 }
 
 /* Natural breakpoint 660px */
-@media only screen and (max-width: 660px) {
 
+@media only screen and (max-width: 660px) {
     svg {
         height: 2.1rem;
         width: 2.1rem;
     }
-
     #intro-container a, .contact-icons-container a {
         height: 2.1rem;
     }
-
     .contact-icon a, .contact-icon svg {
         height: 2.2rem;
         width: 2.2rem
     }
-
     .middle-circle {
         width: 35%;
         height: 35%;
@@ -148,23 +171,20 @@
     .thumbnail-label p, .learn-more-button {
         font-size: 0.55rem;
     }
-
     #contact-main {
         padding: 0 10px;
     }
 }
 
 /* Natural breakpoint 603px */
-@media only screen and (max-width: 603px) {
 
+@media only screen and (max-width: 603px) {
     .thumbnail-label p, .learn-more-button {
         font-size: 0.5rem;
     }
-
     #submit-row {
         justify-content: center;
     }
-
     #contact-main .contact-button {
         margin: 0 5px;
     }
@@ -176,89 +196,54 @@
     #portfolio-main {
         grid-template-columns: repeat(8, 10.5vw);
         grid-template-rows: repeat(13, 10.5vw) 6vw;
-        grid-template-areas: 
-        "intro   intro    intro      intro      intro     header      header      header" 
-        "intro   intro    intro      intro      intro     photo       photo       photo" 
-        "intro   intro    intro      intro      intro     photo       photo       photo" 
-        "intro   intro    intro      intro      intro     photo       photo       photo" 
-        "intro   intro    intro      intro      intro     interactive interactive interactive" 
-        "intro   intro    intro      intro      intro     interactive interactive interactive" 
-        "pern    pern     pern       pern       pern      interactive interactive interactive" 
-        "pern    pern     pern       pern       pern      game        game        game" 
-        "pern    pern     pern       pern       pern      game        game        game" 
-        "pern    pern     pern       pern       pern      game        game        game" 
-        "pern    pern     pern       pern       pern      portfolio  portfolio    portfolio" 
-        "contact  secondary   secondary  listmaker  listmaker portfolio  portfolio    portfolio" 
-        "contact  secondary   secondary  listmaker  listmaker portfolio  portfolio    portfolio"
-        "footer footer footer footer footer footer footer footer";
+        grid-template-areas: "intro   intro    intro      intro      intro     header      header      header" "intro   intro    intro      intro      intro     photo       photo       photo" "intro   intro    intro      intro      intro     photo       photo       photo" "intro   intro    intro      intro      intro     photo       photo       photo" "intro   intro    intro      intro      intro     interactive interactive interactive" "intro   intro    intro      intro      intro     interactive interactive interactive" "pern    pern     pern       pern       pern      interactive interactive interactive" "pern    pern     pern       pern       pern      game        game        game" "pern    pern     pern       pern       pern      game        game        game" "pern    pern     pern       pern       pern      game        game        game" "pern    pern     pern       pern       pern      portfolio  portfolio    portfolio" "contact  secondary   secondary  listmaker  listmaker portfolio  portfolio    portfolio" "contact  secondary   secondary  listmaker  listmaker portfolio  portfolio    portfolio" "footer footer footer footer footer footer footer footer";
     }
-
     h1 {
         font-size: 2.5rem;
         margin-top: 4%;
     }
-
     h2 {
         font-size: 1.75rem;
     }
-
     .contact-icons-container {
         flex-direction: column;
         align-items: center;
     }
-
     .contact-icons-container a {
         margin: 0;
     }
-
     .middle-circle {
         height: 34%;
     }
 }
 
 /* Natural breakpoint 564px */
+
 @media only screen and (max-width: 564px) {
     #portfolio-main {
         margin-top: 27px;
         grid-template-columns: 94vw;
         grid-template-rows: 12vw repeat(8, 94vw) 10vw 10vw;
-        grid-template-areas: 
-        "header  " 
-        "intro   " 
-        "photo   " 
-        "pern    " 
-        "interactive " 
-        "game   " 
-        "portfolio  " 
-        "listmaker  " 
-        "secondary  " 
-        "contact   "
-        "footer ";
+        grid-template-areas: "header  " "intro   " "photo   " "pern    " "interactive " "game   " "portfolio  " "listmaker  " "secondary  " "contact   " "footer ";
     }
-
     .contact-icons-container {
         flex-direction: row;
         justify-content: center;
         align-items: flex-end;
     }
-
     .contact-icons-container a {
         margin: 0 8px;
     }
-
     .middle-circle {
         width: 30%;
         height: 30%;
     }
-
     .video-thumbnail-container .middle-circle, .image-thumbnail-container .middle-circle {
         top: 50%;
     }
-
     .video-thumbnail-container .mobile-circular-label-container .learn-more-button, .image-thumbnail-container .mobile-circular-label-container .learn-more-button {
         top: 59%;
     }
-    
     .middle-circle p, .thumbnail-label p {
         font-size: 0.9rem;
     }
@@ -305,6 +290,7 @@
 }
 
 /* Natural breakpoint 506px */
+
 @media only screen and (max-width: 506px) {
     .middle-circle {
         width: 38%;
@@ -322,6 +308,7 @@
 }
 
 /* Natural breakpoint 454px */
+
 @media only screen and (max-width: 454px) {
     #portfolio-main {
         grid-template-rows: 13vw 100vw repeat(7, 94vw) 10vw 10vw;
@@ -339,6 +326,7 @@
 }
 
 /* Natural breakpoint 444px */
+
 @media only screen and (max-width: 444px) {
     #portfolio-main {
         grid-template-rows: 16vw 120vw repeat(7, 94vw) 10vw;
@@ -350,12 +338,12 @@
 }
 
 /* Natural breakpoint 399px */
+
 @media only screen and (max-width: 399px) {
     #portfolio-main {
         margin-top: 22px;
         grid-template-rows: 18vw 120vw repeat(7, 94vw) 12vw 10vw;
     }
-    
     .middle-circle {
         width: 45%;
         height: 45%;
@@ -363,12 +351,12 @@
 }
 
 /* Natural breakpoint 382px */
+
 @media only screen and (max-width: 382px) {
     .middle-circle {
         width: 48%;
         height: 48%;
     }
-
     footer p {
         margin-top: 0.5rem;
     }
@@ -391,7 +379,6 @@
     #portfolio-main {
         grid-template-rows: 18vw 130vw repeat(7, 94vw) 14vw 10vw;
     }
-    
     .learn-more-button {
         top: 64.5% !important;
     }
